@@ -1,9 +1,23 @@
 <template>
   <div id="app">
-      <router-view/>
+    <b-nav pills>
+      <b-nav-item-dropdown
+        id="my-nav-dropdown"
+        text="Menu"
+        toggle-class="nav-link-custom"
+        right
+      >
+        <b-dropdown-item to="/">Home</b-dropdown-item>
+        <b-dropdown-item to="/custom"> Custom</b-dropdown-item>
+      </b-nav-item-dropdown>
+    </b-nav>
+    <router-view />
   </div>
 </template>
 <script>
+// import { Component, Vue, Watch } from "vue-property-decorator"
+
+// @Component
 export default {
   name: "app",
   data() {

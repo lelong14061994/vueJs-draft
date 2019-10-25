@@ -32,15 +32,20 @@
         <a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a>
       </li>
     </ul>
-    <div id="navigator">
+    <!-- <div id="navigator">
       <router-link to="custom">Custom23</router-link>
       <router-view />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-export default {};
+// import { Component, Vue, Watch } from "vue-property-decorator"
+
+// @Component
+export default{
+  name: 'home'
+};
 </script>
 
 <style>

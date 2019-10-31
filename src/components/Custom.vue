@@ -2,15 +2,10 @@
   <div id="custom">
     <p>Custom</p>
     <b-button variant="success">Button</b-button>
-    <div>
+    <!-- <div>
       <b-table hover :items="info" :fields="fields"></b-table>
-    </div>
-    <!-- {{info}} -->
-    <!-- <template>
-      <div>
-        <b-table hover :items="info"></b-table>
-      </div>
-    </template>-->
+    </div> -->
+    <app-message></app-message>
   </div>
 </template>
     {{info}}
@@ -19,6 +14,7 @@
 
 <script>
 import axios from "axios";
+import Message from "./Message"
 // import { Component, Vue, Watch } from "vue-property-decorator"
 
 // @Component
@@ -43,7 +39,11 @@ export default {
       .catch(error => {
         console.log(error);
       });
-  }
+  },
+  components: {
+            'app-message': Message
+        }
+
 };
 </script>
 <style>
